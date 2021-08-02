@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj": {}
+    "F:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj": {}
   },
   "projects": {
-    "f:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj": {
+    "F:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj",
+        "projectUniqueName": "F:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj",
         "projectName": "Catalog",
-        "projectPath": "f:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj",
+        "projectPath": "F:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj",
         "packagesPath": "C:\\Users\\ale\\.nuget\\packages\\",
-        "outputPath": "f:\\WorkSpaceF\\.Net\\Catalog\\obj\\",
+        "outputPath": "F:\\WorkSpaceF\\.Net\\Catalog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
