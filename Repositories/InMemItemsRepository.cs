@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Catalog.Entities;
 
 namespace Catalog.Repositories
@@ -13,5 +14,15 @@ namespace Catalog.Repositories
             new Item { Id = Guid.NewGuid(), Name = "Bronze Shield", Price = 12, CreatedDate = System.DateTimeOffset.UtcNow }
 
         };
+
+        public IEnumerable<Item> GetItems()
+        {
+            return items;
+        }
+
+        public Item GetItem(Guid Id)
+        {
+            return items.Where(item=>item.Id == Id).SingleOrDefault();
+        }
     }
 }
