@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj": {}
+    "f:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj": {}
   },
   "projects": {
-    "F:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj": {
+    "f:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj",
+        "projectUniqueName": "f:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj",
         "projectName": "Catalog",
-        "projectPath": "F:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj",
+        "projectPath": "f:\\WorkSpaceF\\.Net\\Catalog\\Catalog.csproj",
         "packagesPath": "C:\\Users\\ale\\.nuget\\packages\\",
-        "outputPath": "F:\\WorkSpaceF\\.Net\\Catalog\\obj\\",
+        "outputPath": "f:\\WorkSpaceF\\.Net\\Catalog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -45,6 +45,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.13.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
