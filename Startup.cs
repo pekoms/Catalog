@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Catalog.Settings;
 using Catalog.Repositories;
+using Catalog.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,7 +14,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
-
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
+using MongoDB.Bson;
 
 namespace Catalog
 {
@@ -30,6 +32,9 @@ namespace Catalog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
+            BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
+
             //One copy of the instance of our service created per time -1 copy of the service
             services.AddSingleton<IMongoClient>(serviceProvider =>
             {
@@ -37,7 +42,7 @@ namespace Catalog
                    return new MongoClient(settings.ConnectionString);
             });
 
-            services.AddSingleton<IItemsRepository, InMemItemsRepository>();
+            services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -67,9 +72,9 @@ namespace Catalog
             });
         }
 
-        private class MongoDbSettings
+       /*  private class MongoDbSettings
         {
             public MongoClientSettings ConnectionString { get; internal set; }
-        }
+        } */
     }
 }
